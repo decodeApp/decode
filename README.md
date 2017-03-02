@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 - [ ] Suggestions for other possiblilities when listening/identfying objects/translating
 - [ ] Make a super cool logo
-- [ ] Other cool stuff???
+- [ ] Other cool stuff??
 
 ## Video Walkthrough 
 
