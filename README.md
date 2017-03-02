@@ -1,8 +1,10 @@
-# Project 4 - *Decode*
+# Group Project - *Decode*
 
 **Decode** is an iOS app that translates real speech and images in real time. 
 
 Time spent: **X** hours spent in total
+
+Members: Alex Chen, Caroline Shi, Victoria Zhou
 
 ## User Stories
 
