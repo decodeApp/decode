@@ -10,17 +10,18 @@ Members: Alex Chen, Caroline Shi, Victoria Zhou
 
 The following **required** functionality is completed:
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Translate conversations between two people speaking different languages in real time using phone microphone
+- [ ] Speaks out translations and displays text using speakers and screen
+- [ ] User can specify languages and set primary/most-used languages, as well as configure other settings
+- [ ] Identifies/generates a description for an image of an object taken using phone's camera
+- [ ] Translate the descriptions of objects into a specified language in real time
+- [ ] Implements Autolayout for clean and versatile UI
 
 The following **optional** features are implemented:
 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Suggestions for other possiblilities when listening/identfying objects/translating
+- [ ] Make a super cool logo
+- [ ] Other cool stuff???
 
 ## Video Walkthrough 
 
