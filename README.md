@@ -23,6 +23,25 @@ The following **optional** features are implemented:
 - [ ] Make a super cool logo
 - [ ] Other cool stuff??
 
+## Data Schema
+### API Endpoints
+- Apple: [speech to text and text to speech](https://developer.apple.com/reference/speech)
+- Google: [Translate API](https://cloud.google.com/translate/docs/translating-text)  
+- Microsoft Cognitive Services Computer Vision API: [Describe Image](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fe)
+
+### Model Classes
+- TranslatedText
+    - originalText
+    - translatedText
+    - originalLanguage
+    - translatedLanguage
+- TranslatedImage
+    - image
+    - imageDescription
+    - originalLanguage
+    - translatedDescription
+    - translatedLanguage
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
