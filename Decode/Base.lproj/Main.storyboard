@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Decode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="Decode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pGY-X4-09V" kind="presentation" id="OzL-K8-wdm"/>
+                                    <segue destination="B26-gi-uc8" kind="presentation" id="mvn-jP-q5I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMY-Ro-B9y">
@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TOw-hF-FOf" kind="presentation" id="3sc-yh-UZj"/>
+                                    <segue destination="B26-gi-uc8" kind="presentation" id="jU3-Nj-lmm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDL-Zg-Mhn">
@@ -54,7 +54,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9iA-fY-e2V" kind="presentation" id="OAO-cb-Tji"/>
+                                    <segue destination="B26-gi-uc8" kind="presentation" id="dZH-c7-bSO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DECODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG5-lD-M3Z">
@@ -68,20 +68,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="vCd-Tw-sOw">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="C8r-mN-YgU">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2gE-w9-GJ8">
-                                <rect key="frame" x="292" y="5" width="67" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.43825301220000001" green="0.1255894863" blue="0.82683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="mX0-aj-hxG">
+                            <color key="tintColor" red="0.48986050987927332" green="0.063409295811775124" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="Kq0-eF-WaJ" kind="show" id="k4R-U8-0mD"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="Kq0-eF-WaJ" kind="show" id="Kal-Ti-baq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +83,7 @@
         <!--Settings-->
         <scene sceneID="ppA-bE-ZWP">
             <objects>
-                <viewController title="Settings" id="Kq0-eF-WaJ" sceneMemberID="viewController">
+                <viewController title="Settings" id="Kq0-eF-WaJ" customClass="SettingsViewController" customModule="Decode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pub-eH-5ao"/>
                         <viewControllerLayoutGuide type="bottom" id="Taa-aL-n1B"/>
@@ -105,19 +98,34 @@
                                 <state key="normal" title="Choose default language">
                                     <color key="titleColor" red="0.43825301220000001" green="0.1255894863" blue="0.82683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedChooseLanguage:" destination="Kq0-eF-WaJ" eventType="touchUpInside" id="rOJ-Ql-EuT"/>
+                                </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgn-OB-CfE">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Taa-aL-n1B" firstAttribute="top" secondItem="qgn-OB-CfE" secondAttribute="bottom" id="IUB-lu-fML"/>
+                            <constraint firstItem="qgn-OB-CfE" firstAttribute="leading" secondItem="5aZ-YX-g6Q" secondAttribute="leading" id="Kc8-pR-lhq"/>
+                            <constraint firstAttribute="trailing" secondItem="qgn-OB-CfE" secondAttribute="trailing" id="cRz-Go-ZEq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="IRp-eP-x0j" id="p59-ZT-Xfc"/>
+                        <outlet property="languagePickerView" destination="qgn-OB-CfE" id="iJx-E6-8ge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCZ-8Y-Ao6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="116"/>
+            <point key="canvasLocation" x="1852" y="115.59220389805098"/>
         </scene>
         <!--Image-->
         <scene sceneID="AFL-wK-XZZ">
             <objects>
-                <viewController id="9iA-fY-e2V" sceneMemberID="viewController">
+                <viewController id="9iA-fY-e2V" customClass="ImageViewController" customModule="Decode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0xq-Sj-XBi"/>
                         <viewControllerLayoutGuide type="bottom" id="46e-bl-zpU"/>
@@ -184,7 +192,7 @@
         <!--Speech-->
         <scene sceneID="1pu-BI-Rsb">
             <objects>
-                <viewController id="TOw-hF-FOf" sceneMemberID="viewController">
+                <viewController id="TOw-hF-FOf" customClass="SpeechViewController" customModule="Decode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0zZ-qy-PFv"/>
                         <viewControllerLayoutGuide type="bottom" id="sJQ-vY-Zzy"/>
@@ -243,11 +251,17 @@
                                 <state key="normal" title="Tap to start talking">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapStartSpeaking:" destination="TOw-hF-FOf" eventType="touchUpInside" id="wMY-bs-oFF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Speech" id="MRF-vY-erT"/>
+                    <connections>
+                        <outlet property="translatedTextView" destination="A3f-Hg-8jC" id="Ynj-tU-cvz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reW-Aw-Zc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,7 +270,7 @@
         <!--Text-->
         <scene sceneID="LRG-Re-LDM">
             <objects>
-                <viewController id="pGY-X4-09V" sceneMemberID="viewController">
+                <viewController id="pGY-X4-09V" customClass="TextViewController" customModule="Decode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bCj-M5-pX9"/>
                         <viewControllerLayoutGuide type="bottom" id="dta-xX-ttK"/>
@@ -277,7 +291,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9156514764" green="0.9156514764" blue="0.9156514764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZJ-u1-wlZ">
                                 <rect key="frame" x="146" y="522" width="83" height="30"/>
@@ -320,6 +334,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="MgR-ip-BS9"/>
+                    <connections>
+                        <outlet property="originalTextView" destination="b98-BO-BLZ" id="kvP-mA-53n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLL-Ca-fUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,7 +359,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hG-id-flF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="1051"/>
+            <point key="canvasLocation" x="-564" y="586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MBb-Yh-I4f">
@@ -364,8 +381,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rLg-is-HTj"/>
-        <segue reference="tyX-3F-Ewk"/>
-        <segue reference="xNv-Ul-SZA"/>
+        <segue reference="mvn-jP-q5I"/>
     </inferredMetricsTieBreakers>
 </document>

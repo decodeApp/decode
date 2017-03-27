@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500D35CB1E809CBC00D46BD1 /* LanguageClientSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D35CA1E809CBC00D46BD1 /* LanguageClientSingleton.swift */; };
+		500D35CD1E809D2400D46BD1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D35CC1E809D2400D46BD1 /* ImageViewController.swift */; };
+		50F749F31E808F5E001B10AE /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F21E808F5E001B10AE /* LanguageCodes.swift */; };
+		50F749F51E80921B001B10AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F41E80921B001B10AE /* SettingsViewController.swift */; };
+		50F749F71E8092A9001B10AE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F61E8092A9001B10AE /* TextViewController.swift */; };
+		50F749F91E8092B1001B10AE /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F81E8092B1001B10AE /* SpeechViewController.swift */; };
+		50F749FD1E809B8D001B10AE /* LanguageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749FC1E809B8D001B10AE /* LanguageClient.swift */; };
 		557A83621E6793FD004314B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557A83611E6793FD004314B4 /* AppDelegate.swift */; };
-		557A83641E6793FD004314B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557A83631E6793FD004314B4 /* ViewController.swift */; };
+		557A83641E6793FD004314B4 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557A83631E6793FD004314B4 /* LandingViewController.swift */; };
 		557A83671E6793FD004314B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557A83651E6793FD004314B4 /* Main.storyboard */; };
 		557A83691E6793FD004314B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557A83681E6793FD004314B4 /* Assets.xcassets */; };
 		557A836C1E6793FD004314B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557A836A1E6793FD004314B4 /* LaunchScreen.storyboard */; };
@@ -34,9 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500D35CA1E809CBC00D46BD1 /* LanguageClientSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageClientSingleton.swift; sourceTree = "<group>"; };
+		500D35CC1E809D2400D46BD1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		50F749F21E808F5E001B10AE /* LanguageCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
+		50F749F41E80921B001B10AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		50F749F61E8092A9001B10AE /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		50F749F81E8092B1001B10AE /* SpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
+		50F749FC1E809B8D001B10AE /* LanguageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageClient.swift; sourceTree = "<group>"; };
 		557A835E1E6793FD004314B4 /* Decode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557A83611E6793FD004314B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		557A83631E6793FD004314B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		557A83631E6793FD004314B4 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		557A83661E6793FD004314B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		557A83681E6793FD004314B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		557A836B1E6793FD004314B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +88,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50F749F01E808ECA001B10AE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				557A83631E6793FD004314B4 /* LandingViewController.swift */,
+				50F749F41E80921B001B10AE /* SettingsViewController.swift */,
+				50F749F61E8092A9001B10AE /* TextViewController.swift */,
+				50F749F81E8092B1001B10AE /* SpeechViewController.swift */,
+				500D35CC1E809D2400D46BD1 /* ImageViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		50F749F11E808ED2001B10AE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				50F749F21E808F5E001B10AE /* LanguageCodes.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		50F749FA1E809B61001B10AE /* API  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "API ";
+			sourceTree = "<group>";
+		};
+		50F749FB1E809B6E001B10AE /* LanguageClient */ = {
+			isa = PBXGroup;
+			children = (
+				50F749FC1E809B8D001B10AE /* LanguageClient.swift */,
+			);
+			name = LanguageClient;
+			sourceTree = "<group>";
+		};
 		557A83551E6793FD004314B4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +146,16 @@
 		557A83601E6793FD004314B4 /* Decode */ = {
 			isa = PBXGroup;
 			children = (
+				50F749FB1E809B6E001B10AE /* LanguageClient */,
+				50F749FA1E809B61001B10AE /* API  */,
+				50F749F11E808ED2001B10AE /* Constants */,
+				50F749F01E808ECA001B10AE /* View Controllers */,
 				557A83611E6793FD004314B4 /* AppDelegate.swift */,
-				557A83631E6793FD004314B4 /* ViewController.swift */,
 				557A83651E6793FD004314B4 /* Main.storyboard */,
 				557A83681E6793FD004314B4 /* Assets.xcassets */,
 				557A836A1E6793FD004314B4 /* LaunchScreen.storyboard */,
 				557A836D1E6793FD004314B4 /* Info.plist */,
+				500D35CA1E809CBC00D46BD1 /* LanguageClientSingleton.swift */,
 			);
 			path = Decode;
 			sourceTree = "<group>";
@@ -259,8 +312,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				557A83641E6793FD004314B4 /* ViewController.swift in Sources */,
+				50F749F71E8092A9001B10AE /* TextViewController.swift in Sources */,
+				500D35CD1E809D2400D46BD1 /* ImageViewController.swift in Sources */,
+				50F749F31E808F5E001B10AE /* LanguageCodes.swift in Sources */,
+				50F749FD1E809B8D001B10AE /* LanguageClient.swift in Sources */,
+				557A83641E6793FD004314B4 /* LandingViewController.swift in Sources */,
 				557A83621E6793FD004314B4 /* AppDelegate.swift in Sources */,
+				50F749F91E8092B1001B10AE /* SpeechViewController.swift in Sources */,
+				500D35CB1E809CBC00D46BD1 /* LanguageClientSingleton.swift in Sources */,
+				50F749F51E80921B001B10AE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +563,7 @@
 				557A83881E6793FE004314B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		557A83891E6793FE004314B4 /* Build configuration list for PBXNativeTarget "DecodeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +572,7 @@
 				557A838B1E6793FE004314B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		557A838C1E6793FE004314B4 /* Build configuration list for PBXNativeTarget "DecodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +581,7 @@
 				557A838E1E6793FE004314B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
