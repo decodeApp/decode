@@ -13,12 +13,15 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var languagePickerView: UIPickerView!
     
+    var selectedLanguage: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         languagePickerView.dataSource = self
         languagePickerView.delegate = self
         
         languagePickerView.isHidden = true
+       
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +32,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func tappedChooseLanguage(_ sender: UIButton) {
         languagePickerView.isHidden = false
+        languagePickerView.showsSelectionIndicator = true
         chooseButton.titleLabel?.text = "Select"
     }
 
@@ -60,4 +64,10 @@ extension SettingsViewController: UIPickerViewDelegate {
         return languages[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //typeBarButton.title = array[row]["type1"] as? String
+        selectedLanguage = languages[row]
+        languagePickerView.isHidden = false
+        self.view.endEditing(true)
+    }
 }

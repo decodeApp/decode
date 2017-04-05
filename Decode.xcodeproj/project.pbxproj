@@ -146,6 +146,7 @@
 		557A83601E6793FD004314B4 /* Decode */ = {
 			isa = PBXGroup;
 			children = (
+				55E816741E94623200C89ABC /* Models */,
 				50F749FB1E809B6E001B10AE /* LanguageClient */,
 				50F749FA1E809B61001B10AE /* API  */,
 				50F749F11E808ED2001B10AE /* Constants */,
@@ -176,6 +177,13 @@
 				557A83831E6793FE004314B4 /* Info.plist */,
 			);
 			path = DecodeUITests;
+			sourceTree = "<group>";
+		};
+		55E816741E94623200C89ABC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

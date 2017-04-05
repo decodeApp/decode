@@ -12,6 +12,13 @@ import AVFoundation
 class SpeechViewController: UIViewController {
     
     @IBOutlet weak var translatedTextView: UITextView!
+    @IBOutlet weak var detectedSpeechView: UITextView!
+    @IBOutlet weak var translatedLanguageLabel: UILabel!
+    @IBOutlet weak var detectedLanguageLabel: UILabel!
+    
+    var detectedLanguage: String!
+    var translatedLanguage: String!
+    var languagePickerView: UIPickerView = UIPickerView()
     
     // MARK: Variables
     let synthesizer = AVSpeechSynthesizer()
@@ -20,6 +27,11 @@ class SpeechViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         translatedTextView.text = "你好吗"
+        
+        languagePickerView.dataSource = self
+        languagePickerView.delegate = self
+        languagePickerView.isHidden = true
+        
         // Do any additional setup after loading the view.
     }
 
@@ -38,6 +50,14 @@ class SpeechViewController: UIViewController {
         synthesizer.speak(utterance)
     }
 
+    @IBAction func onSwitchButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func tappedChooseLanguage(_ sender: Any) {
+        languagePickerView.isHidden = false
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -48,5 +68,23 @@ class SpeechViewController: UIViewController {
     }
     */
 
+}
+
+extension SpeechViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return languages.count
+    }
+}
+
+
+extension SpeechViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return languages[row]
+    }
+    
 }
 

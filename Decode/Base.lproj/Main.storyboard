@@ -140,54 +140,69 @@
                                 <state key="normal" title="Choose Language">
                                     <color key="titleColor" red="0.43825301220000001" green="0.1255894863" blue="0.82683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedChooseLanguage:" destination="9iA-fY-e2V" eventType="touchUpInside" id="vRG-jW-B5n"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Translated Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sTX-M8-Z9i">
-                                <rect key="frame" x="24" y="457" width="326" height="119"/>
+                                <rect key="frame" x="24" y="477" width="326" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9156514764" green="0.9156514764" blue="0.9156514764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Original Language: English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-V3-6a9">
-                                <rect key="frame" x="24" y="268" width="204" height="21"/>
+                                <rect key="frame" x="24" y="290" width="204" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translated Language: Spanish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-mM-nsQ">
-                                <rect key="frame" x="24" y="430" width="231" height="21"/>
+                                <rect key="frame" x="24" y="449" width="231" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQK-rm-dwf">
-                                <rect key="frame" x="24" y="66" width="326" height="182"/>
+                                <rect key="frame" x="24" y="66" width="326" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Image description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6cQ-sy-N7o">
-                                <rect key="frame" x="24" y="297" width="326" height="115"/>
+                                <rect key="frame" x="24" y="318" width="326" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9156514764" green="0.9156514764" blue="0.9156514764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to choose image or take picture. Image view displays image." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-3S-59e">
-                                <rect key="frame" x="43" y="83" width="289" height="72"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-tP-1uc">
+                                <rect key="frame" x="24" y="66" width="326" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.9156514764" green="0.9156514764" blue="0.9156514764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Tap to choose image.">
+                                    <color key="titleColor" red="0.43825301220000001" green="0.1255894863" blue="0.82683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChooseImage:" destination="9iA-fY-e2V" eventType="touchUpInside" id="JZp-OX-Xfx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image" id="9JV-6m-iSx"/>
+                    <connections>
+                        <outlet property="originalDescriptionView" destination="6cQ-sy-N7o" id="I5r-g7-lHO"/>
+                        <outlet property="originalLanguageLabel" destination="iCP-V3-6a9" id="SJc-lc-xTC"/>
+                        <outlet property="selectImageButton" destination="XOl-tP-1uc" id="9pB-gp-qGt"/>
+                        <outlet property="selectedImageView" destination="tQK-rm-dwf" id="anP-K9-LXC"/>
+                        <outlet property="translatedLanguageLabel" destination="nBr-mM-nsQ" id="Lp0-Ld-GiV"/>
+                        <outlet property="translatedTextView" destination="sTX-M8-Z9i" id="5V8-Rf-fkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpZ-oJ-V9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="833"/>
+            <point key="canvasLocation" x="1852" y="832.53373313343332"/>
         </scene>
         <!--Speech-->
         <scene sceneID="1pu-BI-Rsb">
@@ -207,6 +222,9 @@
                                 <state key="normal" title="Choose Language">
                                     <color key="titleColor" red="0.43825301220000001" green="0.1255894863" blue="0.82683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedChooseLanguage:" destination="TOw-hF-FOf" eventType="touchUpInside" id="lyb-Q8-ih8"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Translated Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-Hg-8jC">
                                 <rect key="frame" x="24" y="347" width="326" height="145"/>
@@ -229,6 +247,9 @@
                                 <state key="normal" title="Switch">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSwitchButton:" destination="TOw-hF-FOf" eventType="touchUpInside" id="bfG-Tt-54a"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detected Language: English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXm-AS-Rtg">
                                 <rect key="frame" x="24" y="69" width="215" height="21"/>
@@ -260,6 +281,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Speech" id="MRF-vY-erT"/>
                     <connections>
+                        <outlet property="detectedLanguageLabel" destination="UXm-AS-Rtg" id="21w-qq-blw"/>
+                        <outlet property="detectedSpeechView" destination="IJX-D4-i89" id="Z96-4I-2Nl"/>
+                        <outlet property="translatedLanguageLabel" destination="3cp-eb-RgW" id="TbG-fV-a21"/>
                         <outlet property="translatedTextView" destination="A3f-Hg-8jC" id="Ynj-tU-cvz"/>
                     </connections>
                 </viewController>
@@ -285,6 +309,9 @@
                                 <state key="normal" title="Choose Language">
                                     <color key="titleColor" red="0.43825301220000001" green="0.1255894863" blue="0.82683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedChooseLanguage:" destination="pGY-X4-09V" eventType="touchUpInside" id="PwY-gw-Lvp"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b98-BO-BLZ">
                                 <rect key="frame" x="24" y="98" width="326" height="145"/>
@@ -300,6 +327,9 @@
                                 <state key="normal" title="Translate">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTranslateButton:" destination="pGY-X4-09V" eventType="touchUpInside" id="P9r-mW-VuO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbU-EU-eXO">
                                 <rect key="frame" x="146" y="265" width="83" height="30"/>
@@ -308,6 +338,9 @@
                                 <state key="normal" title="Switch">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSwitchButton:" destination="pGY-X4-09V" eventType="touchUpInside" id="fwb-HV-3Jd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Original Language: English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-sR-OFJ">
                                 <rect key="frame" x="24" y="69" width="204" height="21"/>
@@ -335,7 +368,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="MgR-ip-BS9"/>
                     <connections>
+                        <outlet property="originalLanguageLabel" destination="bNU-sR-OFJ" id="dMz-SH-Sfc"/>
                         <outlet property="originalTextView" destination="b98-BO-BLZ" id="kvP-mA-53n"/>
+                        <outlet property="translatedLanguageLabel" destination="ROI-Dd-wrE" id="gid-uU-hHN"/>
+                        <outlet property="translatedTextView" destination="qaf-Zn-k6h" id="fUB-FL-clr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLL-Ca-fUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
