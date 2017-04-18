@@ -9,9 +9,16 @@
 import UIKit
 
 class LandingViewController: UIViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        LanguageClientSingleton.sharedInstance.getAccessToken()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

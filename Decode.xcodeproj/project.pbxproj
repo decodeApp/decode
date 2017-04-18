@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		500D35CB1E809CBC00D46BD1 /* LanguageClientSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D35CA1E809CBC00D46BD1 /* LanguageClientSingleton.swift */; };
 		500D35CD1E809D2400D46BD1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D35CC1E809D2400D46BD1 /* ImageViewController.swift */; };
+		509EF7C61EA58B8400825079 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509EF7C51EA58B8400825079 /* SwiftyJSON.framework */; };
+		509EF7C71EA58B8400825079 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 509EF7C51EA58B8400825079 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50D18CE21EA57D7100B26B3F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D18CE01EA57D6B00B26B3F /* Alamofire.framework */; };
+		50D18CE31EA57D7100B26B3F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50D18CE01EA57D6B00B26B3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50F749F31E808F5E001B10AE /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F21E808F5E001B10AE /* LanguageCodes.swift */; };
 		50F749F51E80921B001B10AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F41E80921B001B10AE /* SettingsViewController.swift */; };
 		50F749F71E8092A9001B10AE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F749F61E8092A9001B10AE /* TextViewController.swift */; };
@@ -40,9 +44,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		50D18CE41EA57D7100B26B3F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				509EF7C71EA58B8400825079 /* SwiftyJSON.framework in Embed Frameworks */,
+				50D18CE31EA57D7100B26B3F /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		500D35CA1E809CBC00D46BD1 /* LanguageClientSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageClientSingleton.swift; sourceTree = "<group>"; };
 		500D35CC1E809D2400D46BD1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		509EF7C51EA58B8400825079 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		50D18CE01EA57D6B00B26B3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		50F749F21E808F5E001B10AE /* LanguageCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
 		50F749F41E80921B001B10AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		50F749F61E8092A9001B10AE /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509EF7C61EA58B8400825079 /* SwiftyJSON.framework in Frameworks */,
+				50D18CE21EA57D7100B26B3F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50D18CDF1EA57D6B00B26B3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50D18CE01EA57D6B00B26B3F /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50F749F01E808ECA001B10AE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,10 +157,12 @@
 		557A83551E6793FD004314B4 = {
 			isa = PBXGroup;
 			children = (
+				509EF7C51EA58B8400825079 /* SwiftyJSON.framework */,
 				557A83601E6793FD004314B4 /* Decode */,
 				557A83751E6793FE004314B4 /* DecodeTests */,
 				557A83801E6793FE004314B4 /* DecodeUITests */,
 				557A835F1E6793FD004314B4 /* Products */,
+				50D18CDF1EA57D6B00B26B3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +229,7 @@
 				557A835A1E6793FD004314B4 /* Sources */,
 				557A835B1E6793FD004314B4 /* Frameworks */,
 				557A835C1E6793FD004314B4 /* Resources */,
+				50D18CE41EA57D7100B26B3F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -478,6 +512,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Decode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = decodeApp.Decode;
@@ -490,6 +528,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Decode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = decodeApp.Decode;

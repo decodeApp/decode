@@ -18,7 +18,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var translatedTextView: UITextView!
     @IBOutlet weak var selectImageButton: UIButton!
     
-    var origianlLangugae: String!
+    var originalLangugae: String!
     var detectedLanguage: String!
     var languagePickerView: UIPickerView = UIPickerView()
     

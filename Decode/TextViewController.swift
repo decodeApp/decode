@@ -28,6 +28,9 @@ class TextViewController: UIViewController {
         languagePickerView.delegate = self
         languagePickerView.isHidden = true
         // Do any additional setup after loading the view.
+        
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +39,7 @@ class TextViewController: UIViewController {
     }
     
     @IBAction func onTranslateButton(_ sender: Any) {
-        
+        LanguageClientSingleton.sharedInstance.translate(langTo: "de", text: "My name is Caroline.")
     }
 
     @IBAction func onSwitchButton(_ sender: Any) {
